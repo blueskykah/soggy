@@ -25,7 +25,10 @@ local allowed = {
     1551416114,
     1389780396,
     252684030,
-    2172305
+    2172305,
+    120983992,
+    4725549245,
+    1921860822
 }
 local bdconnections = {}
 local function updbd()
